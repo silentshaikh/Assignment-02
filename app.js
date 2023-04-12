@@ -73,7 +73,7 @@ console.log(newObj);
 function str(obj) {
     
     for (let app in obj) {
-      localStorage.setItem(prop, JSON.stringify(obj[app]));
+      localStorage.setItem(app, JSON.stringify(obj[app]));
     }
     
     
