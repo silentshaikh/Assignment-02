@@ -81,7 +81,7 @@ function str(obj) {
     for (let app in obj) {
       myobj[app] = JSON.parse(localStorage.getItem(app));
     }
-    return newObj;
+    return myobj;
   }
   let objec = { name: 'Luke Wright', course: "Angular" };
   let retObj = str(objec);
