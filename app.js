@@ -70,20 +70,20 @@ let newObj = myGet("Student");
 console.log(newObj);
 
 //Question #08
-function saveObjectToLocalStorage(obj) {
-    // Save each property to localStorage
-    for (const prop in obj) {
-      localStorage.setItem(prop, JSON.stringify(obj[prop]));
+function str(obj) {
+    
+    for (let app in obj) {
+      localStorage.setItem(prop, JSON.stringify(obj[app]));
     }
     
-    // Retrieve the object from localStorage and return it as a new object
-    const newObj = {};
-    for (const prop in obj) {
-      newObj[prop] = JSON.parse(localStorage.getItem(prop));
+    
+    let myobj = {};
+    for (let app in obj) {
+      myobj[app] = JSON.parse(localStorage.getItem(app));
     }
     return newObj;
   }
-  const Obj = { name: 'Luke Wright', age: 10 };
-  const retrievedObj = saveObjectToLocalStorage(Obj);
-  console.log(retrievedObj);
+  let objec = { name: 'Luke Wright', course: "Angular" };
+  let retObj = str(objec);
+  console.log(retObj);
     
